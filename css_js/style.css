@@ -1,0 +1,286 @@
+html,
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.index {
+  /* width: 100%;
+  height: 30%; */
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  color: black;
+  top: 0%;
+  /* 사파리 sticky */
+  position: -webkit-sticky;
+  position: sticky;
+  padding: 20px 40px;
+}
+
+.index img {
+  /* padding을 넣으면 마진보다 넓은 영역으로 선택이 가능함 (blank부분) */
+  height: 30px;
+}
+
+.index_menu {
+  display: none;
+  background-color: rgb(255, 255, 255, 0.7);
+  padding: 20px;
+}
+
+.index_menu a:hover {
+  color: aqua;
+}
+
+.index_menu li {
+  z-index: 4;
+  display: block;
+
+  font-weight: bolder;
+  width: 180px;
+  text-align: end;
+  padding: 8px;
+  font-size: 22px;
+}
+.index_menu.active {
+  display: block;
+  float: right;
+  color: black;
+  margin-right: 40px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 73px;
+}
+
+.definition {
+  margin: 10% 10%;
+  font-weight: bolder;
+  font-size: 100px;
+}
+
+/* p {
+  text-indent: 30px;
+} */
+
+a {
+  text-decoration: none;
+  color: black;
+}
+ul {
+  list-style: none;
+}
+
+#cursor {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  /* background-color: rgb(24, 24, 24, 1); */
+  box-sizing: border-box;
+  transition: 0.1s ease;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none;
+  z-index: 10000;
+  mix-blend-mode: difference;
+}
+
+/* @media screen and (max-width: 800px) {
+  .definition {
+    font-size: 10vw;
+  }
+} */
+
+
+
+
+/* 여기부터 내 스타일 넣음 위에 건들지 말 것 */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-align: center;
+}
+section #content {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  border: 2px solid;
+}
+.container div .box{
+  display: inline;
+  border: 2px solid black;
+}
+.content {
+  display:contents;
+  border: 2px solid black;
+  width: 85%;
+  background-position: center;
+}
+/* 후원자정보 모달 */
+
+.umodal{
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+.umodal h2{
+  margin: 0;
+}
+
+.umodal .umodal_content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 300px;
+  background: #fff;
+  border: 2px solid #000;
+  z-index: 100;
+}
+.umodal_content label div {
+  position: fixed;
+  top: 50;
+  left: 50;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+.umodal .umodal_layer{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 3;
+}
+
+/* 결제 모달 */
+#modal{
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+#modal h2{
+  margin: 0;
+}
+/* #modal button{
+  display: inline-block;
+  width: 100px;
+  margin-left: auto;
+} */
+#modal .modal_content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 960px;
+  height: 300px;
+  background: #fff;
+  border: 2px solid #000;
+  z-index: 100;
+}
+.modal_content label div {
+  position: fixed;
+  top: 50;
+  left: 50;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+#modal .modal_layer{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 3;
+}
+
+/* 후원 모달 */
+#dmodal{
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+#dmodal h2{
+  margin: 0;
+}
+/* #dmodal button{
+  display: inline-block;
+  width: 100px;
+  margin-left: auto;
+} */
+#dmodal .dmodal_content{
+  position: absolute;
+  /* top: 50%;
+  left: 50%; */
+  transform: translate(-50%, -50%);
+  width: 960px;
+  height: 720px;
+  background: #fff;
+  border: 2px solid #000;
+  z-index: 9999;
+}
+.dmodal_content label div {
+  position: fixed;
+  top: 50;
+  left: 50;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+#dmodal .dmodal_layer{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 3;
+}
+
+/* 버튼 */
+.btn {
+  background-color: #ffffff; 
+  border: none;
+  color: #008cba;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px; 
+  transition-duration: 0.4s;
+  cursor: pointer; 
+}
+.done{
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #008cba;
+}
+.btn:hover{
+  background-color: #008cba;
+  color: #fff;
+}
+
+
